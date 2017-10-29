@@ -7,7 +7,7 @@ tags: [c++, template, macro]
 ---
 
 ## Mục đích  
-Ngôn ngữ Go cung cấp cấu trúc `defer expr` với mục đích thực hiện `expr` khi ra khỏi phạm vi khai báo.  
+Ngôn ngữ Go cung cấp cấu trúc defer expr với mục đích thực hiện expr khi ra khỏi phạm vi khai báo.  
 ```go
 func Foo{
     defer log.Println("call defer")
