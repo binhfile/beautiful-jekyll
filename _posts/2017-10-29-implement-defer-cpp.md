@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Thực hiện `defer` trong C++ 
+title: Thực hiện defer trong C++ 
 image: 
 categories: [c++]
 tags: [c++, template, macro]
