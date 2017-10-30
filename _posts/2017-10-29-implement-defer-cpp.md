@@ -109,7 +109,7 @@ app - defer
 ```
 
 ## Tham khảo  
-- [Mã nguồn](code/cpp/defer/defer.cpp)  
+- [Mã nguồn](https://github.com/binhfile/example-code/blob/master/cpp/defer/defer.cpp)  
 - [CppCon 2014](https://github.com/CppCon/CppCon2014)  
 
 
