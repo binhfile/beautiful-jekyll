@@ -2,7 +2,7 @@
 layout: page
 use-site-title: false
 ---
-
+<!--
 <div class="posts-list">
   {% for post in paginator.posts %}
   <article class="post-preview">
@@ -51,6 +51,22 @@ use-site-title: false
     {% endif %}
 
    </article>
+  {% endfor %}
+</div>
+-->
+<div class="tags-expo-section">
+  {% for tag in site.categories %}
+  <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
+  <ul class="tags-expo-posts">
+    {% for post in tag[1] %}
+      <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+    <li>
+      {{ post.title }} &nbsp-&nbsp
+    <small class="post-date">{{ post.date | date_to_string }}</small>
+    </li>
+    </a>
+    {% endfor %}
+  </ul>
   {% endfor %}
 </div>
 
