@@ -49,6 +49,7 @@ mkdir -p /var/lib/jenkins
 chmod -R 777 /var/lib/jenkins
 
 cat << EOF >> /bootstrap.sh
+#!/bin/sh
 /etc/init.d/jenkins start
 /etc/init.d/ssh start
 while true
@@ -84,7 +85,17 @@ Manage Jenkins > Configure System > Gitlab > GitLab connections
 ## Tạo project  
 Trên jenkins:
 New item > Freestyle project 
-- Source Code Management > Git : điền đường dẫn tới dự án, sử dụng username và paswd của jenkins user trong gitlab
+- Source Code Management > Git : điền đường dẫn tới dự án, sử dụng username và passwd của jenkins user trong gitlab
+- Build Triggers:
+  * Chọn các event phù hợp 
+  * Secret token : Generate 
+
+Trên gitlab:  
+- Tạo người sử dụng 'jenkins' với quyền: 
+- Truy cập project > Settings > Integrations
+  * URL : http://192.168.1.2:8080/project/<project-name> # xem trong 'Build Triggers' của jenkins
+  * Secret Token: sử dụng Secret token trong 'Build Triggers' của jenkins 
+  * Bỏ chọn 'Enable SSL verification'
 
 ## Tham khảo  
 - https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu
