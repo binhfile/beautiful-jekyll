@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cài đặt jenkins cho kết hợp với gitlab cho dự án c++, sử dụng docker    
+title: Cài đặt jenkins cho kết hợp với gitlab cho dự án c++    
 image: 
 categories: [c++, tool]
 tags: [c++, gitlab, jenkins, ci, docker]
