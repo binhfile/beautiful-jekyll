@@ -59,8 +59,7 @@ use-site-title: false
     {% for post in paginator.posts %}
       <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
     <li>
-      {{ post.title }} &nbsp-&nbsp
-    <small class="post-date">{{ post.date | date_to_string }}</small>
+      {{ post.title }}
     </li>
     </a>
     {% endfor %}
