@@ -28,6 +28,8 @@ wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | apt-key add -
 sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 apt-get update
 apt-get install jenkins -y
+# Thêm vào đầu file /etc/init.d/jenkins
+# LANG="en_US.UTF-8"
 /etc/init.d/jenkins start
 
 # Trên host 
