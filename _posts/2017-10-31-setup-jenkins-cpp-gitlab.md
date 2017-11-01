@@ -14,7 +14,14 @@ Cài đặt docker jenkins kết hợp với gitlab.
 # Trên máy host 
 #
 docker pull ubuntu:16.04
-docker run -d --name jenkins_build -p8080:8080 -p2201:22 -v/home/shared:/home/shared -v/home/jenkins:/var/lib/jenkins --restart=always -it ubuntu:16.04
+docker run -d \
+ --security-opt seccomp:unconfined \
+ --name jenkins_build \
+ -p8080:8080 \
+ -p2201:22 \
+ -v/home/shared:/home/shared \
+ -v/home/jenkins:/var/lib/jenkins \ 
+ --restart=always -it ubuntu:16.04
 docker attach jenkins_build
 
 # Trên container jenkins_build
@@ -67,7 +74,14 @@ docker commit jenkins_build jenkins
 
 Tạo container từ jenkins images 
 ```bash
-docker run -d --name jenkins -p8080:8080 -p2201:22 -v/home/shared:/home/shared -v/home/jenkins:/var/lib/jenkins --restart=always -it jenkins /bootstrap.sh
+docker run -d \
+ --security-opt seccomp:unconfined \
+ --name jenkins \
+ -p8080:8080 \
+ -p2201:22 \
+ -v/home/shared:/home/shared \
+ -v/home/jenkins:/var/lib/jenkins \ 
+ --restart=always -it jenkins
 ```
 
 ## Cài đặt gitlab
