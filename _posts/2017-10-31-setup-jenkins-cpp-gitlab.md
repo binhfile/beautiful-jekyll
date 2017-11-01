@@ -126,6 +126,11 @@ Trên gitlab:
   * Add webhook 
   * Test > Hook executed successfully: HTTP 200 là thành công 
 
+## Cài đặt khác  
+- Cho phép đọc các thông tin (build status, report...) không cần đăng nhập
+  * Manager Jenkins > Configure Global Security > Authorization
+    * Allow anonymous read access : checked
+
 ## Tham khảo  
 - https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu
 - https://wiki.jenkins.io/display/JENKINS/JenkinsBehindProxy
