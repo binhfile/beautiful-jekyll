@@ -144,6 +144,17 @@ Trên gitlab:
 - Cho phép đọc các thông tin (build status, report...) không cần đăng nhập
   * Manager Jenkins > Configure Global Security > Authorization
     * Allow anonymous read access : checked
+- Cho phép chạy script, style trong HTML reports  
+```bash
+# Khi gặp lỗi tương tự:
+# Blocked script execution in <URL>. because the document's frame is sandboxed and the 'allow-scripts' permission is not set (Google Chrome)
+#
+# Sửa cấu hình:
+# nano /etc/default/jenkins
+# JAVA_ARGS="-Djava.awt.headless=true  -Dmail.smtp.starttls.enable=true -Dhudson.model.DirectoryBrowserSupport.CSP=\"\""
+/etc/init.d/jenkins stop
+/etc/init.d/jenkins start
+```
 
 ## Tham khảo  
 - https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu
