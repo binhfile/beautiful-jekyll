@@ -155,6 +155,15 @@ Trên gitlab:
 /etc/init.d/jenkins stop
 /etc/init.d/jenkins start
 ```
+- Lỗi khi update submodules  
+```log
+FATAL: Command "git submodule update --init --recursive test/data" returned status code 128:
+stdout: 
+stderr: Cloning into 'test/data'...
+remote: HTTP Basic: Access denied
+```
+  * Configure > Source Code Management > Git > 	Additional Behaviours
+    * Use credentials from default remote of parent repository : checked
 
 ## Tham khảo  
 - https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu
