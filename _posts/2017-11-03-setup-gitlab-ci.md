@@ -12,7 +12,7 @@ gitlab và gitlab-runner chạy trên 2 container khác nhau. Gitlab-runner sẽ
 được cấu hình từ local docker hoặc từ internet về và thực hiện các câu lệnh được khai báo trong 
 `gitlab-ci.yml` sau đó trả về kết quả trong Pipelines của gitlab.
 
-## Cài đặt gitlab-ci lên docker container  
+## Cài đặt gitlab-ci lên docker container
 ```bash
 # Trên máy host 
 #
@@ -66,12 +66,12 @@ docker commit gitlab-ci gitlab-ci
 ```
 
 ## Cấu hình gitlab
-Vào project, Setting > Pipelines 
+Vào project, Setting > Pipelines
 - Shared Runners
-  * Disable shared Runners  
+  * Disable shared Runners
 
 Cấu hình external ip cho gitlab hoặc có thể sử dụng tùy chọn `--hostname 192.168.1.2` 
-khi tạo container  
+khi tạo container
 ```bash
 docker exec -it gitlab vi /etc/gitlab/gitlab.rb
 #   external_url 'http://192.168.1.2'
@@ -79,11 +79,11 @@ docker restart gitlab
 ```
 
 ## Tích hợp hiển thị coverage trong gitlab
-- Sử dụng `gcovr -r .` để hiển thị tỉ lệ kiểm thử ra stdout  
+- Sử dụng `gcovr -r .` để hiển thị tỉ lệ kiểm thử ra stdout
 - Trong gitlab: Setting > Pipelines > Test coverage parsing : ^TOTAL.*\s+(\d+\%)$
 
 ## Một số ưu nhược điểm của gitlab-ci khi so sánh với jenkins  
-- Tích hợp sâu vào gitlab, hiển thị rõ ràng các bước hoạt động, đẹp hơn jenkins 
+- Tích hợp sâu vào gitlab, hiển thị rõ ràng các bước hoạt động, đẹp hơn jenkins
 - Tích hợp hiển thị phần trăm coverage :)
 
 - Không publish được các trang HTML: coverage, cppcheck, pvs check...
