@@ -82,6 +82,12 @@ docker restart gitlab
 - Sử dụng `gcovr -r .` để hiển thị tỉ lệ kiểm thử ra stdout  
 - Trong gitlab: Setting > Pipelines > Test coverage parsing : ^TOTAL.*\s+(\d+\%)$
 
+## Một số ưu nhược điểm của gitlab-ci khi so sánh với jenkins  
+- Tích hợp sâu vào gitlab, hiển thị rõ ràng các bước hoạt động, đẹp hơn jenkins 
+- Tích hợp hiển thị phần trăm coverage :)
+
+- Không publish được các trang HTML: coverage, cppcheck, pvs check...
+
 Tập tin `gitlab-ci.yml` ví dụ  
 ```yml
 before_script:
