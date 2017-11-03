@@ -113,7 +113,7 @@ New item > Freestyle project
 - Source Code Management > Git : điền đường dẫn tới dự án, sử dụng username và passwd của jenkins user trong gitlab
   * Additional Behavious:
     * Advanced sub-modules behavious
-      * Recursively update submodules : checked
+      * Tích chọn Recursively update submodules
 - Build Triggers:
   * Build when a change is pushed to GitLab
     * Chọn các event phù hợp 
@@ -143,7 +143,7 @@ Trên gitlab:
 ## Cài đặt khác  
 - Cho phép đọc các thông tin (build status, report...) không cần đăng nhập
   * Manager Jenkins > Configure Global Security > Authorization
-    * Allow anonymous read access : checked
+    * Tích chọn Allow anonymous read access
 - Cho phép chạy script, style trong HTML reports  
 ```bash
 # Khi gặp lỗi tương tự:
@@ -155,6 +155,14 @@ Trên gitlab:
 /etc/init.d/jenkins stop
 /etc/init.d/jenkins start
 ```
+- Hiển thị trạng thái build của jenkins trên Pipelines của gitlab  
+Trên Gitlab: 
+  * Setting > Integrations > Trigger
+    * Tích chọn Pipeline events
+  * Tài khoản jenkins được cấu hình trong dự án với quyền Developer
+  
+    
+
 - Lỗi khi update submodules  
 ```log
 FATAL: Command "git submodule update --init --recursive test/data" returned status code 128:
@@ -163,7 +171,7 @@ stderr: Cloning into 'test/data'...
 remote: HTTP Basic: Access denied
 ```
   * Configure > Source Code Management > Git > 	Additional Behaviours
-    * Use credentials from default remote of parent repository : checked
+    * Tích chọn Use credentials from default remote of parent repository
 
 ## Tham khảo  
 - https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Ubuntu
