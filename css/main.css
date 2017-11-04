@@ -708,7 +708,7 @@ pre code {
 }
 .highlighter-rouge{
   background: black !important;
-  padding: 3px !important;
+  padding: 5px !important;
 }
 pre.highlight, .highlight > pre, td.code pre {
   /*background: #FAFAFA;*/
