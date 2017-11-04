@@ -2,7 +2,8 @@
 layout: null
 ---
 
-@import url("pygment_highlights.css");
+@import url("native.css");
+@import url("bash.css");
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin-ext,vietnamese');
 
 /* --- General --- */
@@ -10,10 +11,12 @@ layout: null
 body {
   /*font-family: 'Lora', 'Times New Roman', serif;*/
   font-family: 'Inconsolata', monospace;font-family: 'Inconsolata', monospace;
-  font-size: 16px;
-  color: #404040;
+  font-size: 18px;
+  /*color: #404040;*/
+  color: #abc0ca !important;
   position: relative;
-  background: #FFF;
+  /*background: #FFF;*/
+  background-color: #022335 !important;
   {% if site.page-col %}
   background: {{ site.page-col }};
   {% endif %}
@@ -111,9 +114,14 @@ img {
 
 /* --- Navbar --- */
 
+.navbar-brand {
+  font-size: 30px;
+}
+
 .navbar-custom {
-  background: #F5F5F5;
-  border-bottom: 1px solid #EAEAEA;
+  background: #093750 !important;
+  /*border-bottom: 1px solid #EAEAEA;*/
+  border: none !important;
   /*font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
   font-family: 'Inconsolata', monospace;
   {% if site.navbar-col %}
@@ -127,14 +135,14 @@ img {
 
 .navbar-custom .nav li a {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 1px;
 }
 
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a {
   font-weight: 800;
-  color: #404040;
+  color: #abc0ca !important;
 }
 
 .navbar-custom .navbar-brand:hover,
@@ -280,8 +288,10 @@ img {
 
 footer {
   padding: 30px 0;
-  background: #F5F5F5;
-  border-top: 1px #EAEAEA solid;
+  /*background: #F5F5F5;
+  border-top: 1px #EAEAEA solid;*/
+  background: #093750 !important;
+  border: none !important;
   margin-top: 50px;
   font-size: 14px;
   {% if site.footer-col %}
@@ -696,8 +706,12 @@ pre {
 pre code {
   white-space: pre;
 }
+.highlighter-rouge{
+  background: black !important;
+}
 pre.highlight, .highlight > pre, td.code pre {
-  background: #FAFAFA;
+  /*background: #FAFAFA;*/
+  background: black !important;
   background-image: linear-gradient(#F9F9F9 50%, #FDFDFD 50%);
   background-repeat: repeat;
   background-size: 3em 3em;
