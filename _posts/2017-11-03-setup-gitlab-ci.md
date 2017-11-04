@@ -13,7 +13,7 @@ gitlab và gitlab-runner chạy trên 2 container khác nhau. Gitlab-runner sẽ
 `gitlab-ci.yml` sau đó trả về kết quả trong Pipelines của gitlab.
 
 ## Cài đặt gitlab-ci lên docker container
-```bash
+```source-shell
 # Trên máy host 
 #
 docker pull gitlab/gitlab-runner
