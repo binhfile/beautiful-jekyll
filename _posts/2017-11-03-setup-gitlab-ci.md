@@ -85,7 +85,6 @@ docker restart gitlab
 ## Một số ưu nhược điểm của gitlab-ci khi so sánh với jenkins  
 - Tích hợp sâu vào gitlab, hiển thị rõ ràng các bước hoạt động, đẹp hơn jenkins
 - Tích hợp hiển thị phần trăm coverage :)
-
 - Không publish được các trang HTML: coverage, cppcheck, pvs check...
 
 Tập tin `gitlab-ci.yml` ví dụ  
