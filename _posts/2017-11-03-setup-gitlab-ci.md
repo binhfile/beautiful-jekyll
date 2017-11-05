@@ -13,7 +13,7 @@ gitlab và gitlab-runner chạy trên 2 container khác nhau. Gitlab-runner sẽ
 `gitlab-ci.yml` sau đó trả về kết quả trong Pipelines của gitlab.
 
 ## Cài đặt gitlab-ci lên docker container
-```bash
+```cpp
 # Trên máy host 
 #
 docker pull gitlab/gitlab-runner
@@ -48,7 +48,7 @@ docker exec -it gitlab-runner-test gitlab-runner status
 ```
 
 ## Tạo docker images sử dụng cho runner  
-```bash
+```cpp
 docker run -d --name gitlab-ci -it ubuntu:16.04
 docker attach gitlab-ci
 
@@ -72,7 +72,7 @@ Vào project, Setting > Pipelines
 
 Cấu hình external ip cho gitlab hoặc có thể sử dụng tùy chọn `--hostname 192.168.1.2` 
 khi tạo container
-```bash
+```cpp
 docker exec -it gitlab vi /etc/gitlab/gitlab.rb
 #   external_url 'http://192.168.1.2'
 docker restart gitlab

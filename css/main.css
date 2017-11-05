@@ -3,7 +3,7 @@ layout: null
 ---
 
 @import url("native.css");
-@import url("bash.css");
+/* @import url("bash.css"); */
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin-ext,vietnamese');
 
 /* --- General --- */

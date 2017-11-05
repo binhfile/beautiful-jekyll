@@ -10,7 +10,7 @@ tags: [c++, gitlab, ci, docker]
 Cài đặt gitlab trên docker.  
 
 ## Cài đặt gitlab lên docker container  
-```bash
+```cpp
 # Trên máy host 
 #
 mkdir -p /home/gitlab/config /home/gitlab/logs /home/gitlab/data
@@ -34,7 +34,7 @@ Trên browser của host, truy cập địa chỉ `http://<container_ip>`.
 - Đăng nhập với tài khoản root và mật khẩu vừa thiết lập 
 
 ## Backup
-```bash
+```cpp
 # Make sure container is running
 docker exec -t gitlab_old gitlab-rake gitlab:backup:create
 # gitlab will create backup file in /var/gitlab/data/backups/
@@ -43,7 +43,7 @@ docker exec -t gitlab_old gitlab-rake gitlab:backup:create
 ```
 
 ## Restore
-```bash
+```cpp
 # copy backup file to directory
 cp 1509555926_2017_11_01_9.3.0_gitlab_backup.tar /home/gitlab/data/backups/
 docker exec -t gitlab gitlab-ctl stop unicorn

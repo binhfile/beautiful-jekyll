@@ -10,7 +10,7 @@ tags: [c++, gitlab, jenkins, ci, docker]
 Cài đặt docker jenkins kết hợp với gitlab.  
 
 ## Cài đặt jenkins lên docker container  
-```bash
+```cpp
 # Trên máy host 
 #
 docker pull ubuntu:16.04
@@ -73,7 +73,7 @@ docker commit jenkins_build jenkins
 ```
 
 Tạo container từ jenkins images 
-```bash
+```cpp
 docker run -d \
  --security-opt seccomp:unconfined \
  --name jenkins \
@@ -145,7 +145,7 @@ Trên gitlab:
   * Manager Jenkins > Configure Global Security > Authorization
     * Tích chọn Allow anonymous read access
 - Cho phép chạy script, style trong HTML reports  
-```bash
+```cpp
 # Khi gặp lỗi tương tự:
 # Blocked script execution in <URL>. because the document's frame is sandboxed and the 'allow-scripts' permission is not set (Google Chrome)
 #
