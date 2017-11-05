@@ -95,7 +95,7 @@ int main(int argc, const char **args) {
 }
 ```
 Sẽ cho kết quả:  
-```log
+```text
 app - start
 1 - enter
 1 - exit
