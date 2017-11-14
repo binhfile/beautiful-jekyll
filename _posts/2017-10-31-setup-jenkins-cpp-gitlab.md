@@ -82,6 +82,12 @@ docker run -d \
  -v/home/shared:/home/shared \
  -v/home/jenkins:/var/lib/jenkins \ 
  --restart=always -it jenkins
+# Nếu jenkins và gitlab cùng trên 1 máy host 
+#   thêm tùy chọn 
+#   --add-host <gitlab-name>:<gitlab-container-ip>
+#   Ví dụ: <gitlab-name> = gitlab.server.vn
+#   <gitlab-container-ip> Lấy trong lệnh sudo docker inspect <gitlab-container> | grep IP
+# Tương tự cho gitlab muốn truy suất jenkins qua tên miền 
 ```
 
 ## Cài đặt gitlab
@@ -96,7 +102,7 @@ docker run -d \
 
 ## Kết nối gitlab và jenkins  
 Trên jenkins:  
-Bỏ thiết lập proxy trong Manage Jenkins > Manage Plugins > Advanced
+Bỏ thiết lập proxy trong Manage Jenkins > Manage Plugins > Advanced  
 Manage Jenkins > Configure System > Gitlab > GitLab connections  
 - Connection name : local-gitlab
 - Gitlab host URL : http://<gitlab_ip:port>

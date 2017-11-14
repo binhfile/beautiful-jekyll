@@ -26,6 +26,8 @@ docker run -d \
  -v/home/gitlab/logs:/var/log/gitlab:Z \
  -v/home/gitlab/data:/var/opt/gitlab:Z \
  --restart=always -it gitlab/gitlab-ce
+# Có thể thêm --add-host <name>:<ip> để container truy suất ip qua name.
+# ví dụ: --add-host jenkins.server.vn:172.17.0.4
 # Đợi tới khi container khởi động xong 
 ```
 
