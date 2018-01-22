@@ -1,10 +1,12 @@
 ---
 layout: post
-title: [Error] "Pure virtual method called" with std::thread
+title: [Error] Pure virtual method called with std::thread
 image: 
 categories: [c++]
 tags: [c++, error]
 ---
+
+Pure virtual method called  
 
 ```c++
 #include <iostream>
